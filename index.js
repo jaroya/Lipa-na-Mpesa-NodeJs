@@ -80,10 +80,10 @@ app.get('/stk',access, (req, res)=>{
 app.post('/stk_callback', (req, res)=>{
     console.log("-------STK-------");
     console.log(req.body);
-    console.log(req.body.Body);
+    console.log(req.body.Body.stkCallback);
     //console.log(req.Body.stkCallback.callbackMetadata);
     res.status(200)
-        .json(req.Body.stkCallback.callbackMetadata)
+        .json(req.body.Body.stkCallback)
     });
 
 
