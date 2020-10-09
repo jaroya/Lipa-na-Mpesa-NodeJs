@@ -79,17 +79,11 @@ app.get('/stk',access, (req, res)=>{
 
 app.post('/stk_callback', (req, res)=>{
     console.log("-------STK-------");
-    console.log(req.Body);
+    console.log(req.body);
     console.log(req.Body.stkCallback.callbackMetadata);
     res.status(200)
         .json(req.Body.stkCallback.callbackMetadata)
-        .json(req.body)
-});
-
-
-
-
-
+    });
 
 
 
