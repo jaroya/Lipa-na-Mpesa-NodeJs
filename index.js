@@ -53,9 +53,9 @@ app.get('/stk',access, (req, res)=>{
                 "Timestamp": `${timestamp}`,
                 "TransactionType": "CustomerPayBillOnline",
                 "Amount": "1",
-                "PartyA": "254740776347",
+                "PartyA": "254702558716",
                 "PartyB": "174379",
-                "PhoneNumber": "254740776347",
+                "PhoneNumber": "254702558716",
                 "CallBackURL": "https://mpesa-nodejs.herokuapp.com/stk_callback",
                 "AccountReference": "123TEST ",
                 "TransactionDesc": "Process activation"
