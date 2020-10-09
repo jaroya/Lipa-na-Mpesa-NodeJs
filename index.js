@@ -76,9 +76,9 @@ app.get('/stk',access, (req, res)=>{
 app.post('/stk_callback', (req, res)=>{
     console.log("-------STK-------");
     console.log(req.Body);
-    //console.log(req.Body.stkCallback.callbackMetadata);
+    console.log(req.Body.stkCallback.callbackMetadata);
     res.status(200)
-        //.json(req.Body.stkCallback.callbackMetadata)
+        .json(req.Body.stkCallback.callbackMetadata)
         .json(req.body)
 });
 
@@ -119,7 +119,7 @@ function access(req, res, next){
 }
 
 
-const port = 3000;
+const port = 3000 || process.env.PORT;
 app.listen(port, ()=>{
     console.log(`App listening on port ${port}`);
 })
