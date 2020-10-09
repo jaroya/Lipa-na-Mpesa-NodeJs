@@ -9,6 +9,10 @@ app.use(express.json());
 //Routes
 app.get('/', (req, res)=>{
     res.send("Hello World");
+    console.log("-----------------------------------");
+    console.log("Logger working fine")
+    console.log("-----------------------------------");
+
 });
 
 app.get('/access_token', access, (req, res)=>{
