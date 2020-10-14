@@ -31,7 +31,7 @@ app.get('/stk',access, (req, res)=>{
     let endpoint = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest";
     let auth = `Bearer ${req.access_token}`;
     let shortcode = 174379;
-    let passkey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
+    let passkey = "bfb279my_pass_key";
     
     
     let timestamp = moment().format('YYYYMMDDHHmmss');
@@ -53,11 +53,11 @@ app.get('/stk',access, (req, res)=>{
                 "Timestamp": `${timestamp}`,
                 "TransactionType": "CustomerPayBillOnline",
                 "Amount": "1",
-                "PartyA": "254708365449",
+                "PartyA": "2547xxxxxxxx",
                 "PartyB": "174379",
-                "PhoneNumber": "254708365449",
-                "CallBackURL": "https://mpesa-nodejs.herokuapp.com/stk_callback",
-                "AccountReference": "Talwork",
+                "PhoneNumber": "2547xxxxxxxx",
+                "CallBackURL": "https://your-app-name.herokuapp.com/stk_callback",
+                "AccountReference": "TMyTestAccount",
                 "TransactionDesc": "Process activation"
             }
         },
@@ -91,8 +91,8 @@ app.post('/stk_callback', (req, res)=>{
 function access(req, res, next){
     //Acess token
 
-    let consumer_key = 'i5FEMy6A8KIA7eHmKOexqpdXfnfnF1bq';
-    let consumer_secret = 'v5MGNcGezQVG71dQ'
+    let consumer_key = 'my_consumer_key';
+    let consumer_secret = 'My_consumer_secret'
 
     let url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
     let auth = new Buffer.from(`${consumer_key}:${consumer_secret}`).toString('base64');
