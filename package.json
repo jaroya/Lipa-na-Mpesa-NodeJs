@@ -4,6 +4,7 @@
   "description": "Mpesa stk push with nodejs",
   "main": "index.js",
   "scripts": {
+    
     "start": "node index"
   },
   "author": "Michael Jaroya",
@@ -14,3 +15,4 @@
     "request": "^2.88.2"
   }
 }
+
