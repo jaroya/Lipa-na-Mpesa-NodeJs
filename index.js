@@ -53,11 +53,11 @@ app.get('/stk',access, (req, res)=>{
                 "Timestamp": `${timestamp}`,
                 "TransactionType": "CustomerPayBillOnline",
                 "Amount": "1",
-                "PartyA": "254702558716",
+                "PartyA": "254708365449",
                 "PartyB": "174379",
-                "PhoneNumber": "254702558716",
+                "PhoneNumber": "254708365449",
                 "CallBackURL": "https://mpesa-nodejs.herokuapp.com/stk_callback",
-                "AccountReference": "123TEST ",
+                "AccountReference": "Talwork",
                 "TransactionDesc": "Process activation"
             }
         },
@@ -79,12 +79,10 @@ app.get('/stk',access, (req, res)=>{
 
 app.post('/stk_callback', (req, res)=>{
     console.log("-------STK-------");
-    console.log(req.body);
+   
     console.log(req.body.Body.stkCallback);
-    //console.log(req.Body.stkCallback.callbackMetadata);
-    res.status(200)
-        .json(req.body.Body.stkCallback)
-    });
+    
+});
 
 
 
